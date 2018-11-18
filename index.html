@@ -5,6 +5,12 @@
 	<title>HTML Academy: Глейси</title>
 </head>
 <body>
+	<!-- переключатель слайдера, радиобатоны
+	<input type="radio" id="btn-1" name="slider-toggle" checked>
+	<input type="radio" id="btn-2" name="slider-toggle">
+	<input type="radio" id="btn-3" name="slider-toggle">
+				 -->
+
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a class="main-header-logo">
@@ -40,9 +46,54 @@
 
 	<main>
 		<h1 class="visually-hidden">Магазин Глейси - магазин по продаже мороженого</h1>
-		<!-- слайдер -->
+		
+		<div class="promo-slider">
+			
+			<div class="slider-inner">
+				<section class="slider-item">
+					<h2 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h2>
+					<p class="slider-image">
+						<img src="img/img-slider.png" width="" height="" alt="Крем-брюле и пломбир с малиновым джемом">
+					</p>
+					<a class="button" href="#">Давайте оба!</a>
+				</section>
+				<section class="slider-item">
+					<h2 class="slider-title">Шоколадный пломбир и лимонный сорбет</h2>
+					<p class="slider-image">
+						<img src="img/img-slider.png" width="" height="" alt="Шоколадный пломбир и лимонный сорбет">
+					</p>
+					<a class="button" href="#">Давайте оба!</a>
+				</section>
+				<section class="slider-item">
+					<h2 class="slider-title">Пломбир с помадкой и клубничный щербет</h2>
+					<p class="slider-image">
+						<img src="img/img-slider.png" width="" height="" alt="Пломбир с помадкой и клубничный щербет">
+					</p>
+					<a class="button" href="#">Давайте оба!</a>
+				</section>
+			</div>
 
-		<!-- блок promo -->
+			<div class="slider-controls">
+				<label for="btn-1"></label>
+				<label for="btn-2"></label>
+				<label for="btn-3"></label>
+			</div>
+		</div>
+
+		<section class="promo">
+			<ul class="promo-list">
+				<li class="promo-item">
+					<h2 class="promo-title">Малинка даром!</h2>
+					<p class="promo-description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+					<a class="button" href="">Хочу варенье!</a>
+				</li>
+				<li class="promo-item">
+					<h2 class="promo-title">Шоколадки даром!</h2>
+					<p class="promo-description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+					<a class="button" href="">Хочу шоколадки!</a>
+				</li>
+			</ul>
+		</section>
 
 		<section class="bestsellers">
 			<h2 class="visually-hidden">Хиты продаж</h2>
@@ -118,10 +169,10 @@
 
 	<footer class="main-footer">
 		<ul class="footer-social">
-			<li><a href="#" class="social-button">Twitter</a></li>
-			<li><a href="#" class="social-button">Instagram</a></li>
-			<li><a href="#" class="social-button">Facebook</a></li>
-			<li><a href="#" class="social-button">ВКонтакте</a></li>
+			<li><a class="social-button" href="#">Twitter</a></li>
+			<li><a class="social-button" href="#">Instagram</a></li>
+			<li><a class="social-button" href="#">Facebook</a></li>
+			<li><a class="social-button" href="#">ВКонтакте</a></li>
 		</ul>
 		
 		<ul class="footer-navigation">
