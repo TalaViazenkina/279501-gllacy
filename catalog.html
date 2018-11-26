@@ -23,13 +23,59 @@
 				<li><a href="#">Доставка и оплата</a></li>
 				<li><a href="#">О компании</a></li>
 			</ul>
-			<!-- форма поиска -->
+			
 			<ul class="user-navigation">
-				<li class="login">
-					<a href="#">Вход</a>
+				<li class="user-search">
+					<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+						<input type="search" name="search" placeholder="Что ищем?" aria-label="Поле поиска">
+						<button class="visually-hidden" type="submit">Найти</button>
+					</form>
+					
 				</li>
-				<li class="basket basket-with-product">
+				<li class="user-login">
+					<a href="#">Вход</a>
+					<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+						<p class="login-field">
+							<label for="login-email" class="visually-hidden">Укажите вашу электронную почту</label>
+							<input id="login-email" type="email" name="login-email" placeholder="Электронная почта">
+						</p>
+						<p class="login-field">
+							<label for="login-password" class="visually-hidden">Введите пароль</label>
+							<input id="login-password" type="password" name="login-password" placeholder="Пароль">
+						</p>
+						<a href="#">Забыли пароль?</a>
+						<a href="#">Новая регистрация</a>
+						<button class="button" type="submit">Войти</button>
+					</form>
+				</li>
+				<li class="user-basket user-basket-full">
 					<a href="#">2 товара</a>
+					<section class="basket-view">
+						<table class="basket-list">
+							<tr class="basket-item">
+								<td>
+									<button class="basket-item-delete" type="button">Удалить</button>
+								</td>
+								<td><img src="img/basket-product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+								<td>Пломбир с апельсиновым джемом</td>
+								<td>1,5 кг х<span class="table-light"> 200 руб.</span></td>
+								<td>300 руб.</td>
+							</tr>
+							<tr class="basket-item">
+								<td>
+									<button class="basket-item-delete" type="button">Удалить</button>
+								</td>
+								<td><img src="img/basket-product-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+								<td>Клубничный пломбир с присыпкой из белого шоколада</td>
+								<td>1,5 кг х<span class="table-light"> 300 руб.</span></td>
+								<td>450 руб.</td>
+							</tr>
+							<tr class="basket-total">
+								<td colspan="5">Итого: 750 руб.</td>
+							</tr>
+						</table>
+						<a class="button" href="#">Оформить заказ</a>
+					</section>
 				</li>
 			</ul>
 		</nav>
@@ -149,7 +195,7 @@
 						<a href="#">Сливочноe с ментоловым сиропом</a>
 					</h3>
 					<p class="catalog-item-image">
-						<img src="img/product-10.jpg" wwidth="267" height="267" alt="Сливочноe с ментоловым сиропом">
+						<img src="img/product-10.jpg" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
 					</p>
 					<p class="catalog-item-price">435 &#8381; <span class="weight">/кг</span></p>
 					<a class="button" href="#">Быстрый просмотр</a>
@@ -210,8 +256,5 @@
 		</div>
 		
 	</footer>
-
-
-
 </body>
 </html>

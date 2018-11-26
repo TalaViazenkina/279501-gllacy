@@ -29,13 +29,33 @@
 				<li><a href="#">Доставка и оплата</a></li>
 				<li><a href="#">О компании</a></li>
 			</ul>
-			<!-- форма поиска -->
+			
 			<ul class="user-navigation">
-				<li class="login">
-					<a href="">Вход</a>
+				<li class="user-search">
+					<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+						<input type="search" name="search" placeholder="Что ищем?" aria-label="Поле поиска">
+						<button class="visually-hidden" type="submit">Найти</button>
+					</form>
+					
 				</li>
-				<li class="basket basket-empty">
-					<a href="">Пусто</a>
+				<li class="user-login">
+					<a href="#">Вход</a>
+					<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+						<p class="login-field">
+							<label for="login-email" class="visually-hidden">Укажите вашу электронную почту</label>
+							<input id="login-email" type="email" name="login-email" placeholder="Электронная почта">
+						</p>
+						<p class="login-field">
+							<label for="login-password" class="visually-hidden">Введите пароль</label>
+							<input id="login-password" type="password" name="login-password" placeholder="Пароль">
+						</p>
+						<a href="#">Забыли пароль?</a>
+						<a href="#">Новая регистрация</a>
+						<button class="button" type="submit">Войти</button>
+					</form>
+				</li>
+				<li class="user-basket user-basket-empty">
+					<a href="#">Пусто</a>
 				</li>
 			</ul>
 		</nav>
@@ -163,18 +183,22 @@
 		<section class="subscription">
 			<h2 class="visually-hidden">Подписка на новостную рассылку</h2>
 			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-			<!-- здесь будет форма подписки -->
+			<form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+				<label for="subscription-email" class="visually-hidden">Укажите вашу электронную почту</label>
+				<input id="subscription-email" type="email" name="subscription-email" placeholder="Электронная почта">
+				<button class="button" type="submit">Отправить</button>
+			</form>
 		</section>
 
 		<section class="map-and-contacts">
-			<h2 class="visually-hidden">Адреса и контакты</h2>
+			<h2 class="visually-hidden">Адреса и контакты</h2> 
 			<p class="map">
-				<img src="img/map.jpg" width="1200" height="430" alt="Часть карты с местонахождением магазина">
+				<img src="img/map.jpg" width="1200" height="430" alt="Часть карты с главным офисом и офлайн-магазином по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
 			</p>
 			<section class="contacts">
 				<p class="contacts-address">Адрес главного офиса и офлайн-магазина: <span class="contacts-big">ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
 				<p class="contacts-phone">Для заказов по телефону: <span class="contacts-big">8 812 450-25-25 </span>(с 10 до 20 ежедневно)</p>	
-				<a href="" class="contacts-feedback">Форма обратной связи</a>
+				<a href="#" class="contacts-feedback">Форма обратной связи</a>
 			</section>
 
 		</section>
@@ -203,6 +227,25 @@
 		
 	</footer>
 
+	<section class="modal-feedback">
+		<h2 class="visually-hidden">Форма обратной связи</h2>
+		<p>Мы обязательно вам ответим!</p>
+		<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+			<p class="feedback-field">
+				<label for="feedback-login" class="visually-hidden">Ваше имя</label>
+				<input id="feedback-login" type="text" name="feedback-login" placeholder="Как вас зовут?">
+			</p>
+			<p class="feedback-field">
+				<label for="feedback-email" class="visually-hidden">Укажите вашу электронную почту</label>
+				<input id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+			</p>
+			<p class="feedback-field">
+				<textarea name="feedback-message">Напишите что-нибудь...</textarea>
+			</p>
+			<button class="button" type="submit">Отправить</button>
+		</form>
+		<button class="modal-close" type="button">Закрыть</button>	
+	</section>
 
 
 </body>
