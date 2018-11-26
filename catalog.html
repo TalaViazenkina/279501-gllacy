@@ -94,7 +94,57 @@
 
 		<section class="filters">
 			<h2 class="visually-hidden">Фильтр товаров</h2>
-			<!-- Здесь будет форма -->
+			<form class="filter" action="https://echo.htmlacademy.ru" method="get">
+				<p class="filter-field">
+					<label for="filter-sorting">Сортировка:</label>
+					<select id="filter-sorting" name="filter-sorting" >
+						<option value="popular" selected>по популярности</option>
+						<option value="inexpensive">сначала недорогие</option>
+						<option value="expensive">сначала дорогие</option>
+						<option value="fat">по жирности</option>
+					</select>
+				</p>
+				<div class="filter-price">
+					<p class="price-controls">
+						<span>Цена:</span>
+						<label><input type="text" name="min-price" value="100">руб.</label>
+						<span>-</span>
+						<label><input type="text" name="max-price" value="500">руб.</label>
+					</p>
+					<div class="range-controls">
+						<div class="scale">
+							<div class="bar"></div>
+						</div>
+						<div class="toggle toggle-min"></div>
+						<div class="toggle toggle-max"></div>
+					</div>
+				</div>
+				<fieldset class="filter-fat">
+					<legend>Жирность:</legend>
+					<input id="no-fat" type="radio" name="fat-value" value="0">
+					<label for="no-fat">0%</label>
+					<input id="fat-10" type="radio" name="fat-value" value="less-than-10" checked>
+					<label for="fat-10">до 10%</label>
+					<input id="fat-30" type="radio" name="fat-value" value="less-than-30">
+					<label for="fat-30">до 30%</label>
+					<input id="fat-max" type="radio" name="fat-value" value="more-than-30">
+					<label for="fat-max">выше 30%</label>
+				</fieldset>
+				<fieldset class="filter-addition">
+					<legend>Наполнители:</legend>
+					<input id="chocolate" type="checkbox" name="addition-chocolate" checked=""> 
+					<label for="chocolate">шоколадные</label>
+					<input id="sugar" type="checkbox" name="addition-sugar" checked=""> 
+					<label for="sugar">сахарные присыпки</label>
+					<input id="fruite" type="checkbox" name="addition-fruite"> 
+					<label for="fruite">фрукты</label>
+					<input id="syrup" type="checkbox" name="addition-syrup"> 
+					<label for="syrop">сиропы</label>
+					<input id="marmalade" type="checkbox" name="addition-marmalade"> 
+					<label for="marmalade">джемы</label>
+				</fieldset>
+				<button class="button filter-button" type="submit">Применить</button>
+			</form>
 		</section>
 
 		<section class="catalog">
