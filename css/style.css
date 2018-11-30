@@ -26,10 +26,22 @@ a {
 	list-style: none;
 }
 
+.site-navigation-current {
+	background-color: #d07058;
+	border-radius: 16px;
+}
+
 .site-navigation a {
 	line-height: 16px;
 	color: #ffffff;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-navigation-current a{
+	line-height: 18px;
+	color: #ffffff;
+
+	border: none;
 }
 
 .site-navigation a:hover,
@@ -37,6 +49,7 @@ a {
 	color: #323232;
 	
 	background-color: #f7f6f3;
+	border: none;
 	border-radius: 16px;
 	outline: none;
 }
@@ -44,6 +57,7 @@ a {
 .site-navigation a:active {
 	color: #323232;
 	background-color: #ededed;
+	border: none;
 	border-radius: 16px;
 	box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
 }
@@ -64,6 +78,11 @@ a {
 	border-radius: 16px;
 }
 
+.user-basket-full a {
+	color: #323232;
+	background-color: #f7f6f3;
+}
+
 .user-navigation a:hover,
 .user-navigation a:focus {
 	color: #323232;
@@ -77,6 +96,10 @@ a {
 
 .login-form {
 	display: none;
+}
+
+.basket-view {
+	display:none;
 }
 
 .worktime {
@@ -227,6 +250,82 @@ a {
 	background-image: linear-gradient(to bottom, rgb(215, 69, 49) 0%, rgb(225, 97, 62) 100%);
 	box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
 	outline: none;
+}
+
+/* Каталог */
+
+.breadcrumbs {
+	list-style: none
+}
+
+.breadcrumbs a {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: #ffffff;
+
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+	color: #ffbc9e;
+	border-bottom-color: rgba(249, 172, 159, 0.3);
+}
+
+.breadcrumbs-current a,
+.breadcrumbs-current a:hover,
+.breadcrumbs-current a:focus,
+.breadcrumbs-current a:active {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: #ffffff;
+
+	border: none;
+}
+
+.page-title {
+	font-size: 35px;
+	line-height: 41px;
+}
+
+/* Фильтры */
+
+/* Карточка товара */
+
+.catalog-list {
+	list-style: none;
+}
+
+.catalog-item-title a {
+	font-weight: 500;
+	color: #ffffff;
+
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+.catalog-item-title a:hover,
+.catalog-item-title a:focus,
+.catalog-item-title a:active {
+	color: #ffbc9e;
+	border-bottom-color: rgba(249, 172, 159, 0.3);
+}
+
+.catalog-item-image img {
+	border-radius: 50%;
+}
+
+.catalog-item-price {
+	font-size: 45px;
+	line-height: 45px;
+	text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  
+}
+
+.catalog-item-price .weight {
+	font-size: 30px;
 }
 
 /* Футер */
