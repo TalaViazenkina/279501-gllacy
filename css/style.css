@@ -14,15 +14,18 @@ body {
 }
 
 .background-gray-green {
-
+	background-color: #849d8f;
+	background-image: radial-gradient(circle at center 358px, #cff6e1, transparent 523px);
 }
 
 .background-gray-purple {
-
+	background-color: #8996a6;
+	background-image: radial-gradient(circle at center 326px, #d6ebfc, transparent 533px);
 }
 
 .background-gray-brown {
-
+	background-color: #9d8b84;
+	background-image: radial-gradient(circle at center 314px, #fae4db, transparent 540px);
 }
 
 .inner-page {
@@ -220,7 +223,21 @@ a {
 	text-align: right;
 }
 
+.slider-item {
+	padding: 0 250px;
+	text-align: center;
+}
 
+.slider-item:first-child {
+	padding: 0 235px;
+}
+
+.slider-title {
+	padding: 0;
+	margin: 0;
+	font-size: 60px;
+	line-height: 60px;
+}
 
 .index-columns {
 	display: flex;
@@ -416,6 +433,13 @@ a {
 	box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
 	
 }
+
+
+
+
+
+
+
 
 .button:hover,
 .buton:focus {
