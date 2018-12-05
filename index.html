@@ -33,7 +33,7 @@
 					<a href="#">Поиск по сайту</a>
 					<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
 						<input type="search" name="search" placeholder="Что ищем?" aria-label="Поле поиска">
-						<button class="visually-hidden" type="submit">Найти</button>
+						<!-- <button class="visually-hidden" type="submit">Найти</button> -->
 					</form>
 					
 				</li>
@@ -76,33 +76,33 @@
 						<p class="slider-image">
 							<img src="img/slider-1.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом">
 						</p>
-						<a class="button-slider" href="#">Давайте оба!</a>
+						<a class="slider-button" href="#">Давайте оба!</a>
 					</section>
 					<section class="slider-item">
 						<h2 class="slider-title">Шоколадный пломбир и лимонный сорбет</h2>
 						<p class="slider-image">
-							<img src="img/slider-2.png" width="644" height="582" alt="Шоколадный пломбир и лимонный сорбет">
+							<img src="img/slider-2.png" width="647" height="584" alt="Шоколадный пломбир и лимонный сорбет">
 						</p>
-						<a class="button-slider" href="#">Давайте оба!</a>
+						<a class="slider-button" href="#">Давайте оба!</a>
 					</section>
 					<section class="slider-item">
 						<h2 class="slider-title">Пломбир с помадкой и клубничный щербет</h2>
 						<p class="slider-image">
-							<img src="img/slider-3.png" width="639" height="582" alt="Пломбир с помадкой и клубничный щербет">
+							<img src="img/slider-3.png" width="647" height="584" alt="Пломбир с помадкой и клубничный щербет">
 						</p>
-						<a class="button-slider" href="#">Давайте оба!</a>
+						<a class="slider-button" href="#">Давайте оба!</a>
 					</section>
 				
 
 				<ul class="slider-controls">
 					<li>
-						<button class="slide-btn" aria-label="Первый слайд"></button>
+						<button class="slide-control" aria-label="Первый слайд"></button>
 					</li>
 					<li>
-						<button class="slide-btn" aria-label="Второй слайд"></button>
+						<button class="slide-control" aria-label="Второй слайд"></button>
 					</li>
 					<li>
-						<button class="slide-btn" aria-label="Третий слайд"></button>
+						<button class="slide-control" aria-label="Третий слайд"></button>
 					</li>
 				</ul>
 			</div>
@@ -207,9 +207,15 @@
 				<img src="img/map.jpg" width="1200" height="430" alt="Часть карты с главным офисом и офлайн-магазином по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
 			</p>
 			<section class="contacts">
-				<p class="contacts-address">Адрес главного офиса и офлайн-магазина: <span class="contacts-big">ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
-				<p class="contacts-phone">Для заказов по телефону: <span class="contacts-big">8 812 450-25-25 </span>(с 10 до 20 ежедневно)</p>	
-				<a href="#" class="contacts-feedback">Форма обратной связи</a>
+				<dl>
+					<dt>Адрес главного офиса и офлайн-магазина: </dt>
+					<dd>ул. Большая Конюшенная 19/8, Санкт-Петербург</dd>
+					<dt>Для заказов по телефону: </dt>
+					<dd>8 812 450-25-25 <span class="contacts-note">(с 10 до 20 ежедневно)</span></dd>
+				</dl>
+				<!-- <p class="contacts-address"><span class="contacts-big"></span></p>
+				<p class="contacts-phone"><span class="contacts-big"></span>(с 10 до 20 ежедневно)</p>	 -->
+				<a href="#" class="button contacts-feedback">Форма обратной связи</a>
 			</section>
 
 		</section>
@@ -251,7 +257,7 @@
 				<input id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
 			</p>
 			<p class="feedback-field">
-				<textarea name="feedback-message" placeholder="Напишите что-нибудь..."></textarea>
+				<textarea name="feedback-message" rows="5" placeholder="Напишите что-нибудь..."></textarea>
 			</p>
 			<button class="button" type="submit">Отправить</button>
 		</form>
