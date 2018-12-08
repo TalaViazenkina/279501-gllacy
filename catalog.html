@@ -28,11 +28,11 @@
 			</ul>
 			
 			<ul class="user-navigation">
-				<a href="#">Поиск по сайту</a>
 				<li class="user-search">
+					<a href="#">Поиск по сайту</a>
 					<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
 						<input type="search" name="search" placeholder="Что ищем?" aria-label="Поле поиска">
-						<button class="visually-hidden" type="submit">Найти</button>
+						<!-- <button class="visually-hidden" type="submit">Найти</button> -->
 					</form>
 					
 				</li>
@@ -60,7 +60,11 @@
 								<td>
 									<button class="basket-item-delete" type="button">Удалить</button>
 								</td>
-								<td><img src="img/basket-product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+								<td>
+									<a href="#">
+										<img src="img/basket-product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+									</a>
+								</td>
 								<td>Пломбир с апельсиновым джемом</td>
 								<td>1,5 кг х<span class="table-light"> 200 руб.</span></td>
 								<td>300 руб.</td>
@@ -69,13 +73,18 @@
 								<td>
 									<button class="basket-item-delete" type="button">Удалить</button>
 								</td>
-								<td><img src="img/basket-product-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+								<td>
+									<a href="#">
+										<img src="img/basket-product-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+									</a>
+								</td>
 								<td>Клубничный пломбир с присыпкой из белого шоколада</td>
 								<td>1,5 кг х<span class="table-light"> 300 руб.</span></td>
 								<td>450 руб.</td>
 							</tr>
 							<tr class="basket-total">
-								<td colspan="5">Итого: 750 руб.</td>
+								<td colspan="4">Итого:</td>
+								<td>750 руб.</td>
 							</tr>
 						</table>
 						<a class="button" href="#">Оформить заказ</a>
@@ -105,7 +114,7 @@
 
 		<section class="filters">
 			<h2 class="visually-hidden">Фильтр товаров</h2>
-			<form class="filter" action="https://echo.htmlacademy.ru" method="get">
+			<form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
 				<p class="filter-field">
 					<label for="filter-sorting">Сортировка:</label>
 					<select id="filter-sorting" name="filter-sorting" >
@@ -154,7 +163,7 @@
 					<input id="marmalade" type="checkbox" name="addition-marmalade"> 
 					<label for="marmalade">джемы</label>
 				</fieldset>
-				<button class="button filter-button" type="submit">Применить</button>
+				<button class="filter-button" type="submit">Применить</button>
 			</form>
 		</section>
 

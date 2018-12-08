@@ -181,7 +181,7 @@ a {
 	border-radius: 16px;
 }
 
-.user-basket-full a {
+.user-basket-full > a {
 	color: #323232;
 	background-color: #f7f6f3;
 }
@@ -315,7 +315,36 @@ a {
 
 
 .basket-view {
-	display:none;
+	width: 510px;
+	padding: 20px 15px;
+	color: #323232;
+
+	background-color: #f8f7f4;
+	border-radius: 5px;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.basket-list {
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 16px;
+	border-collapse: collapse;
+}
+
+.basket-list .table-light {
+	color: #999999;
+}
+
+.basket-list .basket-total {
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+
+	border-top: 1px solid #cacac7;
+}
+
+.basket-total td[colspan="4"] {
+	text-align: right;
 }
 
 .main-header > p {
@@ -730,6 +759,84 @@ a {
 }
 
 /* Фильтры */
+.filters-form {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.filters-form select {
+	font: inherit;
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff; 
+
+	background-color: rgba(255, 255, 255, 0.2);
+	border: none;
+	border-radius: 19px;
+}
+
+.filters-form select:hover, 
+.filters-form select:focus {
+	color: #323232;
+	outline: none;
+}
+
+.filters-form select:focus-within {
+	color: #323232;
+	background-color: #ffffff;
+	outline:none;
+}
+
+.filters-form option {
+	font: inherit;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: #323232;
+}
+
+/* Разобраться со стилизацией выпадающего списка */
+
+.filters-form fieldset {
+	background-color: rgba(255, 255, 255, 0.2);
+	border: none;
+	border-radius: 19px;
+}
+
+.filters-form input[type="radio"] + label,
+.filters-form input[type="checkbox"] + label {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.filter-button {
+	font: inherit;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	color: #ffffff;
+
+	background-color: rgba(255, 255, 255, 0.2);
+	border: none;
+	border-radius: 22px;
+	box-shadow: inset 0 0 0 2px  #fbfcfb;
+}
+
+.filter-button:hover,
+.filter-buton:focus {
+	color: #323232;
+	background-color: #fbfcfb;
+	outline: none;
+}
+
+.filter-button:active {
+	background-color: #eaeaea;
+	box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);
+	outline: none;
+}
+
 
 /* Карточка товара */
 
@@ -803,6 +910,49 @@ a {
 	top: 340px;
 	align-self: center;
 	order: 2;
+}
+
+.catalog-pagination {
+	list-style: none;
+}
+
+.catalog-pagination a {
+	display: block;
+	width: 27px;
+	height: 26px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	color: #ffffff;
+
+	border-radius: 50%;
+}
+
+.catalog-pagination a:hover,
+.catalog-pagination a:focus {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.catalog-pagination a:active {
+	color: #323232;
+	background-color: #ffffff;
+}
+
+.catalog-pagination-current a {
+	color: #323232;
+	background-color: #ffffff;
+}
+
+.Подложка {
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 1006px;
+  top: 1486px;
+  width: 27px;
+  height: 26px;
+  z-index: 40;
 }
 
 /* Футер */
