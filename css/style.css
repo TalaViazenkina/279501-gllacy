@@ -366,7 +366,12 @@ a {
 	text-align: right;
 }
 
+.slider {
+	position: relative;
+}
+
 .slider-item {
+	position:relative;
 	padding: 0 250px;
 	text-align: center;
 }
@@ -376,13 +381,17 @@ a {
 }
 
 .slider-title {
-	padding: 0;
+	padding: 290px 0 22px 0;
 	margin: 0;
 	font-size: 60px;
 	line-height: 60px;
 }
 
 .slider-image {
+	position: absolute;
+	top: -20px;
+	left: 250px;
+	z-index: -1;
 	margin: 0;
 }
 
@@ -392,6 +401,9 @@ a {
 }
 
 .slider-button {
+	display: block;
+	margin-bottom: 40px;
+
 	font-size: 32px;
 	line-height: 44px;
 	color: #ffffff;
@@ -417,12 +429,18 @@ a {
 }
 
 .slider-controls {
+	position: absolute;
+	bottom: 60px;
+	display: flex;
+	padding: 0;
+	margin: 0;
 	list-style: none;
 }
 
 .slide-control {
 	width: 17px;
 	height: 17px;
+	margin-right: 8px;
 
 	background-color: transparent;
 	border: 2px solid #ffffff;
@@ -436,6 +454,10 @@ a {
 }
 
 .slide-control:active {
+	background-color: #ffffff;
+}
+
+.slide-control-current {
 	background-color: #ffffff;
 }
 
@@ -489,6 +511,116 @@ a {
 
 .promo .button {
 	margin-left: auto;
+}
+
+
+.button {
+	font: inherit;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+	color: #ffffff;
+	
+	background-color: #ec593c;
+	background-image: linear-gradient(to top, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+	border: none;
+	border-radius: 22px;
+	box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
+	
+}
+
+.button:hover,
+.buton:focus {
+	color: #fefefe;
+
+	background-color: #f07a63;
+	background-image: linear-gradient(to top, rgb(236, 111, 94) 0%, rgb(245, 134, 105) 100%);
+	box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 1);
+	outline: none;
+
+}
+
+.button:active {
+	color: #fceeec;
+
+	background-color: #db5338;
+	background-image: linear-gradient(to bottom, rgb(215, 69, 49) 0%, rgb(225, 97, 62) 100%);
+	box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
+	outline: none;
+}
+
+.bestsellers-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+
+.catalog-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 267px;
+	margin-right: 26px;
+	margin-bottom: 30px;
+	padding-top: 7px;
+}
+
+.catalog-item:nth-child(4n) {
+	margin-right: 0;
+}
+
+.catalog-item-title {
+	order: 1;
+	margin: 0 0 10px 0;
+	font-size: 16px;
+	text-align: center;
+}
+
+.catalog-item-title a {
+	font-weight: 500;
+	color: #ffffff;
+
+	background-image: linear-gradient(to top, transparent 1px, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+}
+
+.catalog-item-title a:hover,
+.catalog-item-title a:focus,
+.catalog-item-title a:active {
+	color: #ffbc9e;
+	background-image: linear-gradient(to top, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);
+	}
+
+.catalog-item-image {
+	margin: 0 0 15px 0;
+}
+
+.catalog-item-image img {
+	border-radius: 50%;
+}
+
+.catalog-item-price {
+	position: absolute;
+	margin: 0;
+	top: 215px;
+	font-size: 45px;
+	line-height: 45px;
+	text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  
+}
+
+.catalog-item-price .weight {
+	font-size: 30px;
+}
+
+.button-preview {
+	position: absolute;
+	top: 340px;
+	align-self: center;
+	order: 2;
 }
 
 .features {
@@ -622,45 +754,15 @@ a {
 	color: #999999;
 }
 
-.button {
-	font: inherit;
-	font-size: 18px;
-	line-height: 24px;
-	text-align: center;
-	color: #ffffff;
-	
-	background-color: #ec593c;
-	background-image: linear-gradient(to top, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
-	border: none;
-	border-radius: 22px;
-	box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
-	
-}
-
-.button:hover,
-.buton:focus {
-	color: #fefefe;
-
-	background-color: #f07a63;
-	background-image: linear-gradient(to top, rgb(236, 111, 94) 0%, rgb(245, 134, 105) 100%);
-	box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 1);
-	outline: none;
-
-}
-
-.button:active {
-	color: #fceeec;
-
-	background-color: #db5338;
-	background-image: linear-gradient(to bottom, rgb(215, 69, 49) 0%, rgb(225, 97, 62) 100%);
-	box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
-	outline: none;
-}
 
 .map-and-contacts {
 	position: relative;
 	width: 1200px;
 	margin: 0 auto;
+}
+
+.map-and-contacts p {
+	margin: 0;
 }
 
 .map-and-contacts img {
@@ -760,9 +862,17 @@ a {
 
 /* Фильтры */
 .filters-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-end;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 16px;
+}
+
+.filter-sorting {
+	margin: 0;
 }
 
 .filters-form select {
@@ -840,6 +950,13 @@ a {
 
 /* Карточка товара */
 
+.catalog {
+	display: flex;
+	flex-direction: column;
+
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .catalog-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -848,71 +965,11 @@ a {
 	list-style: none;
 }
 
-.catalog-item {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	width: 267px;
-	margin-right: 26px;
-	margin-bottom: 30px;
-	padding-top: 7px;
-}
-
-.catalog-item:nth-child(4n) {
-	margin-right: 0;
-}
-
-.catalog-item-title {
-	order: 1;
-	margin: 0 0 10px 0;
-	font-size: 16px;
-	text-align: center;
-}
-
-.catalog-item-title a {
-	font-weight: 500;
-	color: #ffffff;
-
-	background-image: linear-gradient(to top, transparent 1px, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
-}
-
-.catalog-item-title a:hover,
-.catalog-item-title a:focus,
-.catalog-item-title a:active {
-	color: #ffbc9e;
-	background-image: linear-gradient(to top, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);
-	}
-
-.catalog-item-image {
-	margin: 0 0 15px 0;
-}
-
-.catalog-item-image img {
-	border-radius: 50%;
-}
-
-.catalog-item-price {
-	position: absolute;
-	margin: 0;
-	top: 215px;
-	font-size: 45px;
-	line-height: 45px;
-	text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
-  
-}
-
-.catalog-item-price .weight {
-	font-size: 30px;
-}
-
-.button-preview {
-	position: absolute;
-	top: 340px;
-	align-self: center;
-	order: 2;
-}
 
 .catalog-pagination {
+	display: flex;
+	margin: 0 0 0 auto;
+	padding: 0;
 	list-style: none;
 }
 
@@ -932,6 +989,7 @@ a {
 .catalog-pagination a:hover,
 .catalog-pagination a:focus {
 	background-color: rgba(255, 255, 255, 0.2);
+	outline: none;
 }
 
 .catalog-pagination a:active {
@@ -944,16 +1002,7 @@ a {
 	background-color: #ffffff;
 }
 
-.Подложка {
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  left: 1006px;
-  top: 1486px;
-  width: 27px;
-  height: 26px;
-  z-index: 40;
-}
+
 
 /* Футер */
 
@@ -961,6 +1010,8 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	padding-top: 18px;
 }
 
 .main-footer a {
