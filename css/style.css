@@ -763,6 +763,10 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	margin-left: auto;
 }
 
+.bestsellers {
+	margin-bottom: 27px;
+}
+
 .bestsellers-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -889,18 +893,20 @@ tr.basket-item:nth-child(2) .basket-item-title {
 
 
 .features {
-	padding: 25px 20px;
+	padding: 25px 20px 20px 20px;
 	margin-bottom: 40px;
 
 	color: #323232;
 	background-color: #eee1c6;
 	background-image: url("../img/bg-wafer.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
+	background-repeat: repeat;
+	
 	border-radius: 16px;
 }
 
 .features p {
+	margin: 0; 
+
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 30px;
@@ -909,21 +915,50 @@ tr.basket-item:nth-child(2) .basket-item-title {
 .features-list {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
 .feature-item {
-	width: 483px;
-	margin-rigth: 26px;
+	position: relative;
+	width: 480px;
+	padding-top: 20px;
 	padding-left: 57px;
-	padding-bottom: 25px;
+	
 	font-weight: 400;
 }
 
-.feature-item:nth-child(even) {
-	margin-right: 0;
+.feature-item::before {
+	content: "";
+
+	position: absolute;
+	top: 8px;
+	left: 0;
+
+	width: 49px;
+	height: 49px;
+
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+.feature-item-fabrication::before {
+	background-image: url("../img/ice-cream.svg");
+}
+
+.feature-item-provider::before {
+	background-image: url("../img/cow.svg");
+}
+
+.feature-item-ingredient::before {
+	background-image: url("../img/leaf.svg");
+}
+
+.feature-item-delivery::before {
+	background-image: url("../img/thermometer.svg");
 }
 
 .new-post {
