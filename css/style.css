@@ -995,8 +995,35 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	background-image: linear-gradient(to top, transparent 2px,  rgba(236, 89, 60, 0.3) 2px,  rgba(236, 89, 60, 0.3) 4px, transparent 4px);
 	outline: none;
 }
-
 .subscription {
+	position: relative;
+	z-index: 1;
+	
+	width: 510px;
+	padding: 35px 25px 40px;
+
+	font-weight: 400;
+	color: #5a5a5a;
+	
+	background-image: repeating-linear-gradient(135deg, #f8f7f4 1px, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 20px, #fe9e90 20px, #fe9e90 27px);
+	border-radius: 16px;
+}
+
+.subscription::before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	bottom: 5px;
+	left: 5px;
+	z-index: -1;
+	background-color: #f8f7f4;
+	border-radius: 16px;
+
+}
+
+
+/* .subscription {
 	display: flex;
 	width: 550px;
 	padding: 5px;
@@ -1011,7 +1038,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	color: #5a5a5a;
 	background-color: #f8f7f4;
 	border-radius: 16px;
-}
+} */
 
 .subscription-inner p {
 	margin: 0;
@@ -1186,7 +1213,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 }
 
 .page-title {
-	margin: 0 0 25px 0;
+	margin: 0 0 20px 0;
 	font-size: 35px;
 	line-height: 41px;
 }
@@ -1197,6 +1224,8 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-end;
+
+	margin-bottom: 30px;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 16px;
@@ -1204,6 +1233,13 @@ tr.basket-item:nth-child(2) .basket-item-title {
 
 .filter-sorting {
 	margin: 0;
+	margin-right: 16px;
+}
+
+.filter-sorting label {
+	display: block;
+	margin-bottom: 5px;
+	padding-left: 16px;
 }
 
 .filters-form select {
@@ -1211,10 +1247,12 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	font-size: 16px;
 	line-height: 18px;
 	color: #ffffff; 
+	
+	padding: 8px 10px 8px 15px;
 
 	background-color: rgba(255, 255, 255, 0.2);
 	border: none;
-	border-radius: 19px;
+	border-radius: 18px;
 }
 
 .filters-form select:hover, 
@@ -1238,17 +1276,249 @@ tr.basket-item:nth-child(2) .basket-item-title {
 } */
 
 /* Разобраться со стилизацией выпадающего списка */
+.filter-price {
+	margin-right: 15px;
+}
+
+.price-controls {
+	margin: 0;
+	margin-bottom: 5px;
+	padding-left: 15px;
+}
+
+
+.price-controls input {
+	width: 30px;
+	
+	font: inherit;
+	color: inherit;
+	
+	background: none;
+	border: none;
+}
+
+.range-controls {
+	position: relative;
+
+	width: 176px;
+	padding: 16px 22px;
+
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 18px;
+}
+
+.range-controls .scale {
+	width: 100%;
+	height: 4px;
+
+	background-color: rgba(248, 247, 244, 0.5)
+}
+
+.range-controls .bar {
+	width: 107px;
+	height: 4px;
+	margin-left: 16px;
+
+	background-color: rgb(248, 247, 244);
+}
+
+.range-toggle {
+	position: absolute;
+	top: 8px;
+
+	width: 4px;
+	height: 4px;
+
+	background-color: #ababab;
+	border: 8px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.range-toggle-min {
+	left: 34px;
+}
+
+.range-toggle-max {
+	left: 132px;
+}
 
 .filters-form fieldset {
-	background-color: rgba(255, 255, 255, 0.2);
+	margin: 0;
+	padding: 0;
+
 	border: none;
+	
+	/* background-color: rgba(255, 255, 255, 0.2);
+	border: none;
+	border-radius: 19px; */
+}
+
+.filters-form legend {
+	margin-bottom: 5px;
+	padding-left: 16px;
+}
+
+.filter-fat ul {
+	display: flex;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 18px;
+}
+
+
+.filter-fat li {
+	padding: 0 5px;
+}
+
+.filter-fat li:last-child {
+	padding-right: 10px;
+}
+
+.filter-fat label {
+	position: relative;
+	display: block;
+	padding: 9px 5px 9px 36px;
+
+	font-size: 16px;
+	line-height: 18px;
+	cursor: pointer;
+}
+
+.filter-input-radio + label::before {
+	content: "";
+	
+	position: absolute;
+	top: 7px;
+	left: 7px;
+
+	width: 14px;
+	height: 14px;
+	border: 4px solid #ffffff;
+	border-radius: 50%;
+	opacity: 0.8;
+}
+
+.filter-input-radio + label:hover::before,
+.filter-input-radio:focus + label::before {
+	opacity: 1;
+}
+
+.filter-input-radio:disabled + label::before {
+	opacity: 0.4;
+}
+
+.filter-input-radio:checked + label::after {
+	content: "";
+	
+	position: absolute;
+	top: 14px;
+	left: 14px;
+
+	width: 8px;
+	height: 8px;
+	background-color: #ffffff;
+	border-radius: 50%;
+
+	opacity: 0.8;
+}
+
+.filter-input-radio:checked + label:hover::after,
+.filter-input-radio:checked:focus + label::after {
+	opacity: 1;
+}
+
+.filter-input-radio:checked:disabled + label::after {
+	opacity: 0.4;
+}
+
+.filters-form .filter-addition {
+	margin-top: 15px;
+}
+
+
+
+.filter-addition ul {
+	display: flex;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+
+	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 19px;
 }
 
-.filters-form input[type="radio"] + label,
-.filters-form input[type="checkbox"] + label {
+.filter-addition li {
+	padding: 0 5px;
+}
+
+.filter-addition li:last-child {
+	padding-right: 15px;
+}
+
+.filter-addition label {
+	position: relative;
+	display: block;
+	padding: 9px 5px 9px 39px;
+
 	font-size: 16px;
 	line-height: 18px;
+	cursor: pointer;
+}
+
+.filter-input-checkbox:not(:checked) + label::before {
+	content: "";
+	
+	position: absolute;
+	top: 8px;
+	left: 7px;
+
+	width: 16px;
+	height: 16px;
+	border: 2px solid #ffffff;
+	border-radius: 3px;
+	opacity: 0.8;
+}
+
+.filter-input-checkbox:not(:checked) + label:hover::before,
+.filter-input-checkbox:not(:checked):focus + label::before {
+	opacity: 1;
+}
+
+.filter-input-checkbox:not(:checked):disabled + label::before {
+	opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label::before {
+	content: "";
+	
+	position: absolute;
+	top: 8px;
+	left: 7px;
+
+	width: 23px;
+	height: 20px;
+	background-image: url("../img/checkbox-on.svg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+	opacity: 0.8;
+}
+
+.filter-input-checkbox:checked + label:hover::before,
+.filter-input-checkbox:checked:focus + label::before {
+	opacity: 1;
+}
+
+.filter-input-checkbox:checked:disabled + label::before {
+	opacity: 0.4;
 }
 
 .filter-button {
@@ -1258,6 +1528,9 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	line-height: 18px;
 	text-align: center;
 	color: #ffffff;
+
+	margin-left: 15px;
+	padding: 9px 30px;
 
 	background-color: rgba(255, 255, 255, 0.2);
 	border: none;
