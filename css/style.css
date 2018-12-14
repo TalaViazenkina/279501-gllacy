@@ -537,6 +537,7 @@ a.user-basket-full {
 	background-repeat: no-repeat;
 	background-position: center;
 	border: none;
+	cursor: pointer;
 }
 
 .basket-list .basket-item-image {
@@ -1572,6 +1573,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 .catalog-pagination {
 	display: flex;
 	margin: 0 0 0 auto;
+	margin-bottom: 30px;
 	padding: 0;
 	list-style: none;
 }
@@ -1600,10 +1602,64 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	background-color: #ffffff;
 }
 
+.pagination-arrows {
+	position: relative;
+}
+
+.pagination-arrows::before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	right: 7px;
+
+	width: 8px;
+	height: 8px;
+	border: 2px solid #ffffff;
+	border-top-style: none;
+	border-right-style: none;
+
+	transform: rotate(45deg);
+
+}
+
+.pagination-next::before {
+	left: 7px;
+	transform: rotate(-135deg);
+}
+
+.pagination-arrows:active::before {
+	border-color: #323232;
+}
+
 .catalog-pagination-current a {
 	color: #323232;
 	background-color: #ffffff;
 }
+
+.catalog-pagination-current a:hover,
+.catalog-pagination-current a:focus,
+.catalog-pagination-current a:active {
+	color: #323232;
+	background-color: #ffffff;
+	outline: none;
+}
+
+.catalog-pagination-disabled a::before {
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
+.catalog-pagination-disabled a:hover,
+.catalog-pagination-disabled a:focus, 
+.catalog-pagination-disabled a:active {
+	background: none;
+	outline: none;
+	cursor: default;
+}
+
+.catalog-pagination-disabled a:active::before {
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
 
 
 
