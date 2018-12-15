@@ -277,7 +277,7 @@ a.user-search {
 .search-form input {
 	box-sizing: border-box;
 	width: 100%;
-	padding: 10px 15px 8px;
+	padding: 9px 15px 7px;
 
 	font: inherit;
 	font-weight: 700;
@@ -354,7 +354,7 @@ a.user-search {
 .login-form input {
 	box-sizing: border-box;
 	width: 100%;
-	padding: 10px 15px 8px;
+	padding: 9px 15px 7px;
 	font: inherit;
 	font-weight: 700;
 	line-height: 24px;
@@ -435,6 +435,7 @@ a.user-search {
 	border: none;
 	border-radius: 22px;
 	box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
+	cursor: pointer;
 }
 
 .button:hover,
@@ -490,7 +491,7 @@ a.user-basket-full {
 	right: 0;
 	z-index: 1;
 
-	display: none;
+	display: none; 
 
 	width: 510px;
 	padding: 20px 15px;
@@ -520,22 +521,37 @@ a.user-basket-full {
 }
 
 .basket-list .basket-item-delete {
-	width: 22px;
+	
 	padding-right: 0;
 	padding-left: 0;
 }
 
 .basket-item-delete button {
-	width: 14px;
-	height: 14px;
+	position: relative;
+	width: 22px;
+	height: 22px;
 	padding: 0;
 
 	background-color: transparent;
-	background-image: url("../img/cross-small.svg");
-	background-repeat: no-repeat;
-	background-position: center;
 	border: none;
 	cursor: pointer;
+}
+
+.basket-item-delete button::before,
+.basket-item-delete button::after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 2px;
+	width: 15px;
+	height: 1px;
+	background-color: #231f20;
+	transform: rotate(45deg);
+
+}
+
+.basket-item-delete button::after {
+	transform: rotate(-45deg);
 }
 
 .basket-list .basket-item-image {
@@ -1020,7 +1036,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 }
 .subscription {
 	position: relative;
-	z-index: 1;
+	z-index: 0;
 	
 	width: 510px;
 	padding: 35px 25px 40px;
@@ -1074,7 +1090,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 .subscription-form input {
 	box-sizing: border-box;
 	width: 370px;
-	padding: 10px 15px 8px;
+	padding: 9px 15px 7px;
 	margin-right: 5px;
 	
 
@@ -1822,14 +1838,69 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	outline: none;
 }
 
+/* Модальное окно */
+
+@keyframes emerging {
+	0% {
+		transform: translateY(-400px) scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes swing {
+	40% {
+		transform: translateY(-150px) scale(0.7);
+	}
+	100% {
+		transform: translateY(0) scale(1);
+	}
+}
+
+@keyframes disappearing {
+	
+	100% {
+		transform: translateY(-400px) scale(0);
+		opacity: 0;
+		
+	}
+}
+
 .modal-feedback {
+	display: none; 
+	position: fixed;
+	top: 338px;
+	left: 50%;
+	z-index: 1;
+
 	width: 428px;
-	padding: 18px 24px;
+	padding: 18px 25px;
+	margin-left: -239px;
 
 	color: #323232;
 
 	background-color: #f8f7f4;
 	border-radius: 10px;
+}
+
+.modal-show {
+	display: block;
+
+	animation: emerging 0.8s;
+}
+
+.modal-error {
+	animation: swing 0.8s;
+}
+
+.modal-closing {
+	display: block;
+	animation: disappearing 0.8s;
+	animation-fill-mode: forwards;
+
 }
 
 .modal-feedback > p {
@@ -1854,7 +1925,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 .feedback-form input,
 .feedback-form textarea {
 	box-sizing: border-box;
-	padding: 10px 15px 8px;
+	padding: 9px 15px 7px;
 	font: inherit;
 	font-weight: 700;
 	line-height: 24px;
@@ -1871,7 +1942,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 
 .feedback-form textarea {
 	width: 100%;
-	padding-bottom: 23px;
+	padding-bottom: 20px;
 	
 }
 
@@ -1908,7 +1979,50 @@ tr.basket-item:nth-child(2) .basket-item-title {
 
 .feedback-form .button {
 	align-self: flex-end;
-	margin-top: 5px;
 	margin-bottom: 10px;
 }
 
+.modal-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+
+	width: 30px;
+	height: 30px;
+
+	font-size: 0;
+
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+	content: "";
+	position: absolute;
+	top: 14px;
+	left: 4px;
+	width: 22px;
+	height: 2px;
+	background-color: #231f20;
+	transform: rotate(45deg);
+}
+
+.modal-close::after {
+	transform: rotate(-45deg);
+}
+
+.overlay {
+	display: none; 
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.overlay-show {
+	display: block;
+}
