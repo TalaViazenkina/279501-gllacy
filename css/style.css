@@ -1138,11 +1138,19 @@ tr.basket-item:nth-child(2) .basket-item-title {
 
 .map-and-contacts {
 	position: relative;
+
 	width: 1200px;
 	margin: 0 auto;
 }
 
-.map-and-contacts p {
+.map-and-contacts iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.map {
+	
 	margin: 0;
 }
 
@@ -1865,6 +1873,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	100% {
 		transform: translateY(-400px) scale(0);
 		opacity: 0;
+		visibility: hidden;
 		
 	}
 }
