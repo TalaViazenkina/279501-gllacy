@@ -2209,10 +2209,8 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 .feedback-field {
@@ -2246,6 +2244,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 .feedback-form textarea {
 	width: 100%;
 	height: 155px;
+	margin-bottom: 22px;
 }
 
 .feedback-form input::-webkit-input-placeholder,
@@ -2282,8 +2281,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 }
 
 .feedback-form .button {
-	-ms-flex-item-align: end;
-	align-self: flex-end;
+	margin-left: auto;
 	margin-bottom: 10px;
 }
 
