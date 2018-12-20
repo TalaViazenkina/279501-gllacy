@@ -94,6 +94,10 @@ img {
 	margin-right: 15px;
 }
 
+.main-header-logo:focus {
+	outline: 2px solid #ffffff;
+}
+
 .site-navigation {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -506,14 +510,13 @@ a.user-search {
 }
 
 .button {
-	display: inline-block;
+	display: block;
 	padding: 10px 25px;
 
 	font: inherit;
 	font-size: 18px;
 	line-height: 24px;
 	text-align: center;
-	vertical-align: middle;
 	color: #ffffff;
 	
 	background-color: #ec593c;
@@ -529,7 +532,7 @@ a.user-search {
 }
 
 .button:hover,
-.buton:focus {
+.button:focus {
 	color: #fefefe;
 
 	background-color: #f07a63;
@@ -552,11 +555,14 @@ a.user-search {
 	background-image: linear-gradient(to bottom, rgb(215, 69, 49) 0%, rgb(225, 97, 62) 100%);
 	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
 	box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
-	outline: none;
 }
 
 .user-basket {
 	position: relative;
+}
+
+.user-basket:focus {
+	outline: 2px solid #ffffff;
 }
 
 .user-basket::before {
@@ -600,6 +606,8 @@ a.user-basket-full {
 	-webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
+
+
 
 .user-navigation-item:hover .basket-view {
 	display: block;
@@ -708,8 +716,11 @@ tr.basket-item:nth-child(2) .basket-item-title {
 }
 
 .basket-view .button {
+	display: inline-block;
 	padding-right: 16px;
 	padding-left: 15px;
+
+	vertical-align: bottom;
 }
 
 .header-info {
@@ -792,7 +803,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	
 	font-size: 32px;
 	line-height: 44px;
-	vertical-align: top;
+	vertical-align: bottom;
 	color: #ffffff;
 
 	background-color: #ec593c;
@@ -815,6 +826,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	background-image: linear-gradient(to top, rgb(236, 111, 94) 0%, rgb(245, 134, 105) 100%);
 	-webkit-box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
 	box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+	outline: none;
 }
 
 .slider-button:active {
@@ -832,9 +844,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	bottom: 292px;
 
 	display: -webkit-box;
-
 	display: -ms-flexbox;
-
 	display: flex;
 }
 
@@ -843,10 +853,18 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	height: 17px;
 	margin-right: 8px;
 
+	font-size: 0;
+
 	background-color: transparent;
 	border: 2px solid #ffffff;
 	border-radius: 50%;
 	cursor: pointer;
+}
+
+#product-1:focus ~ .site-wrapper label[for="product-1"],
+#product-2:focus ~ .site-wrapper label[for="product-2"],
+#product-3:focus ~ .site-wrapper label[for="product-3"] {
+	outline: 2px solid #ffffff;
 }
 
 #product-1:checked ~ .site-wrapper label[for="product-1"],
@@ -855,8 +873,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	background-color: #ffffff;
 }
 
-.slide-control:hover,
-.slide-control:focus {
+.slide-control:hover {
 	background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -1022,6 +1039,10 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	background-image: linear-gradient(to top,  rgba(249, 172, 159, 0.3) 0px, rgba(249, 172, 159, 0.3) 1px, transparent 1px);
 }	
 
+.catalog-item-title a:focus {
+	outline: 2px solid #ffffff;
+}
+
 .catalog-item-image {
 	position: relative;
 
@@ -1078,7 +1099,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 }
 
 .catalog-item:hover .button-preview {
-	display: inline-block;
+	display: block;
 }
 
 .features {
@@ -1413,9 +1434,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	color: #ffffff;
 
 	background-image: -webkit-linear-gradient(bottom, transparent 1px, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
-
 	background-image: -o-linear-gradient(bottom, transparent 1px, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
-
 	background-image: linear-gradient(to top, transparent 1px, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
 	background-repeat: no-repeat;
 	background-origin: content-box;
@@ -1427,11 +1446,12 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	color: #ffbc9e;
 
 	background-image: -webkit-linear-gradient(bottom, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);
-
 	background-image: -o-linear-gradient(bottom, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);
+	background-image: linear-gradient(to top, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);
+}
 
-	background-image: linear-gradient(to top, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);;
-	outline: none;
+.breadcrumbs a:focus {
+	outline: 2px solid #ffffff;
 }
 
 .breadcrumbs-current a,
@@ -1530,6 +1550,10 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	border: none;
 }
 
+.price-controls input:focus {
+	outline: 2px solid #ffffff;
+}
+
 .range-controls {
 	position: relative;
 
@@ -1558,14 +1582,22 @@ tr.basket-item:nth-child(2) .basket-item-title {
 .range-toggle {
 	position: absolute;
 	top: 8px;
-
+	
+	display: block;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
 	width: 4px;
 	height: 4px;
+	padding: 0;
 
 	background-color: #ababab;
 	border: 8px solid #ffffff;
 	border-radius: 50%;
 	cursor: pointer;
+}
+
+.range-toggle:focus {
+	outline: 2px solid #ffffff;
 }
 
 .range-toggle-min {
@@ -1774,7 +1806,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 }
 
 .filter-button:hover,
-.filter-buton:focus {
+.filter-button:focus {
 	color: #323232;
 
 	background-color: #fbfcfb;
@@ -1785,7 +1817,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	background-color: #eaeaea;
 	-webkit-box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);
 	box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);
-	outline: none;
+	
 }
 
 /* Карточка товара */
@@ -1845,7 +1877,10 @@ tr.basket-item:nth-child(2) .basket-item-title {
 .catalog-pagination a:hover,
 .catalog-pagination a:focus {
 	background-color: rgba(255, 255, 255, 0.2);
-	outline: none;
+}
+
+.catalog-pagination a:focus {
+	outline: 2px solid #ffffff;
 }
 
 .catalog-pagination a:active {
@@ -1904,7 +1939,6 @@ tr.basket-item:nth-child(2) .basket-item-title {
 	color: #323232;
 
 	background-color: #ffffff;
-	outline: none;
 }
 
 .catalog-pagination-disabled a::before {
@@ -1942,6 +1976,10 @@ tr.basket-item:nth-child(2) .basket-item-title {
 
 .main-footer a {
 	color: #ffffff;
+}
+
+.main-footer a:focus {
+	outline: 2px solid #ffffff;
 }
 
 .footer-social {
@@ -2050,14 +2088,18 @@ tr.basket-item:nth-child(2) .basket-item-title {
 
 	background-image: -webkit-linear-gradient(bottom, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);
 	background-image: -o-linear-gradient(bottom, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);
-	background-image: linear-gradient(to top, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);;
-	outline: none;
+	background-image: linear-gradient(to top, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);
 }
 
 .footer-copyright {
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 18px;
+}
+
+.footer-copyright img {
+	width: 108px
+	height: 37px;
 }
 
 .copyright-htmlacademy {
@@ -2082,8 +2124,7 @@ tr.basket-item:nth-child(2) .basket-item-title {
 
 	background-image: -webkit-linear-gradient(bottom, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);
 	background-image: -o-linear-gradient(bottom, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);
-	background-image: linear-gradient(to top, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);;
-	outline: none;
+	background-image: linear-gradient(to top, transparent 1px, rgba(249, 172, 159, 0.3) 1px, rgba(249, 172, 159, 0.3) 2px, transparent 2px);
 }
 
 /* Модальное окно */
