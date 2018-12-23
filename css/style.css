@@ -1070,9 +1070,7 @@ td.basket-item-total {
 	color: #ffffff;
 
 	background-image: -webkit-linear-gradient(bottom,  rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-
 	background-image: -o-linear-gradient(bottom,  rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-
 	background-image: linear-gradient(to top,  rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
 }
 
@@ -1279,6 +1277,7 @@ td.basket-item-total {
 	font-weight: 400;
 	color: #5a5a5a;
 
+	background-color: #f8f7f4;
 	background-image: -webkit-repeating-linear-gradient(315deg, #fe9e90 0px, #fe9e90 2px, #f8f7f4 2px, #f8f7f4 9px, #92cdff 9px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 22px, #fe9e90 22px, #fe9e90 27px);
 
 	background-image: -o-repeating-linear-gradient(315deg, #fe9e90 0px, #fe9e90 2px, #f8f7f4 2px, #f8f7f4 9px, #92cdff 9px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 22px, #fe9e90 22px, #fe9e90 27px);
@@ -1557,8 +1556,24 @@ td.basket-item-total {
 	padding-left: 17px;
 }
 
+.select-container {
+	position: relative;
+
+	display: inline-block;
+	padding: 0 14px 0 0;
+
+	vertical-align: bottom;
+	
+	
+	border-radius: 18px;
+
+	overflow: hidden;
+}
+
+
 .filters-form select {
-	padding: 8px 14px 8px 13px;
+	width: 160%;
+	padding: 8px 0 8px 12px;
 
 	font: inherit;
 	font-size: 16px;
@@ -1567,7 +1582,7 @@ td.basket-item-total {
 
 	background-color: rgba(255, 255, 255, 0.2);
 	border: none;
-	border-radius: 18px;
+	
 }
 
 .filters-form select:hover, 
@@ -1581,6 +1596,32 @@ td.basket-item-total {
 
 	background-color: #ffffff;
 	outline:none;
+}
+
+
+.select-container::after {
+	content: "";
+
+	position: absolute;
+	top: 13px;
+	right: 15px;
+
+	display: block;
+	width: 0;
+	height: 0;
+
+	border-top: 10px solid #ffffff;
+	border-right: 5px solid transparent;
+	border-bottom: none;
+	border-left: 5px solid transparent;
+}
+
+.select-container:hover::after {
+	border-top-color: #323232;
+}
+
+.select-container:focus-within::after {
+	border-top-color: #323232;
 }
 
 .filter-price {
