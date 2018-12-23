@@ -1002,9 +1002,7 @@ td.basket-item-total {
 	position: relative;
 
 	display: -webkit-box;
-
 	display: -ms-flexbox;
-
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -1076,7 +1074,7 @@ td.basket-item-total {
 }	
 
 .catalog-item-title a:focus {
-	outline: 2px solid #ffffff;
+	outline: none;
 }
 
 .catalog-item-image {
@@ -1241,9 +1239,7 @@ td.basket-item-total {
 	color: #323232;
 
 	background-image: -webkit-linear-gradient(bottom, transparent 2px, #353535 2px, #353535 4px, transparent 4px);
-
 	background-image: -o-linear-gradient(bottom, transparent 2px, #353535 2px, #353535 4px, transparent 4px);
-
 	background-image: linear-gradient(to top, transparent 2px, #353535 2px, #353535 4px, transparent 4px);
 }
 
@@ -1253,9 +1249,7 @@ td.basket-item-total {
 	color: #e84d37;
 
 	background-image: -webkit-linear-gradient(bottom, transparent 2px,  rgba(236, 89, 60, 0.3) 2px,  rgba(236, 89, 60, 0.3) 4px, transparent 4px);
-
 	background-image: -o-linear-gradient(bottom, transparent 2px,  rgba(236, 89, 60, 0.3) 2px,  rgba(236, 89, 60, 0.3) 4px, transparent 4px);
-
 	background-image: linear-gradient(to top, transparent 2px,  rgba(236, 89, 60, 0.3) 2px,  rgba(236, 89, 60, 0.3) 4px, transparent 4px);
 	outline: none;
 }
@@ -1271,9 +1265,7 @@ td.basket-item-total {
 
 	background-color: #f8f7f4;
 	background-image: -webkit-repeating-linear-gradient(315deg, #fe9e90 0px, #fe9e90 2px, #f8f7f4 2px, #f8f7f4 9px, #92cdff 9px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 22px, #fe9e90 22px, #fe9e90 27px);
-
 	background-image: -o-repeating-linear-gradient(315deg, #fe9e90 0px, #fe9e90 2px, #f8f7f4 2px, #f8f7f4 9px, #92cdff 9px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 22px, #fe9e90 22px, #fe9e90 27px);
-
 	background-image: repeating-linear-gradient(135deg, #fe9e90 0px, #fe9e90 2px, #f8f7f4 2px, #f8f7f4 9px, #92cdff 9px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 22px, #fe9e90 22px, #fe9e90 27px);
 	border-radius: 16px;
 }
