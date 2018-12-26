@@ -1217,6 +1217,7 @@ td.basket-item-total {
 
 	background-color: #ffffff;
 	background-image: url("../img/bg-strawberry.jpg");
+	background-position: right 0 top 0;
 	background-size: cover;
 	border-radius: 16px;
 }
